@@ -2,7 +2,7 @@
 layout: page
 title: Autowired
 bigimg: img/big-img.png
-subtitle: Code Coffee Pizza
+subtitle: <h2>
 use-site-title: true
 ---
 
@@ -10,7 +10,7 @@ use-site-title: true
   {% for post in paginator.posts %}
   <article class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
-	  <h2 class="post-title">{{ post.title }}</h2>
+	  <h2 class="post-title">@{{ post.title }}</h2>
 
 	  {% if post.subtitle %}
 	  <h3 class="post-subtitle">
