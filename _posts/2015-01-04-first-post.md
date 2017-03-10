@@ -7,32 +7,42 @@ tags: [random, exciting-stuff]
 
 As it is now, when I tried various Cross-Origin Resource Sharing (CORS) , I noticed that there are more patterns than I thought, so I tried again how to handle it.
 
-In the first place
+<h3> In the first place</h3>
+
 In current Web browsers, Same-Origin Policy (same generation policy in Japanese) is applied to prevent information on one Web site from being abused by another malicious Web site .
 
 For example, when displaying a certain Web site https://guiltysite.com in a browser, you can use HTTP (S ( XHR)) from this Web page from another Web site https://innocentsite.net with XMLHttpRequest (XHR) or Fetch API ), An error occurs when trying to read data.
 
-However, it is inconvenient to limit the Web site where trust is established as a partner of data collaboration, as long as the access source is a malicious Web site, so it is inconvenient for a Web site that can allow data access There is CORS as a mechanism to enable access beyond Origin .
+However, it is inconvenient to limit the Web site where trust is established as a partner of data collaboration, as long as the access source is a malicious Web site, so it is inconvenient for a Web site that can allow data access There is CORS as a mechanism to enable access beyond Origin.
 
-Example of how to use CORS
+<h3>Example of how to use CORS</h3>
+
 Here, some Web site https://trustedsite.com against, another Web site https://usefulapis.net states the case that you want to allow access on the HTTP (S) to as an example.
 
 When you want to allow data to be read in a simple way
 If you simply want to allow GET or POST with XHR or Fetch API, do as follows. First of all, on the client side, there is no need for any special effort in the case of XHR, and in the case of the Fetch API, declare to use CORS depending on the option.
 
-Client JavaScript (XHR)
-<code>
-var  Xhr  =  New  XMLHttpRequest (); 
-Xhr . Open ( 'GET' ,  'Https://Usefulapis.Net/api' ); 
-Xhr . addEventListener ( 'Load' ,  OnLoadFunc ,  False ); 
-Xhr . Send ( Null );
-</code>
+<h3>Client JavaScript (XHR)</h3>
 
-Client JavaScript (Fetch)
+<pre><code>
+var  Xhr  =  New  XMLHttpRequest ();
+
+Xhr . Open ( 'GET' ,  'Https://Usefulapis.Net/api' );
+
+Xhr . addEventListener ( 'Load' ,  OnLoadFunc ,  False ); 
+
+Xhr . Send ( Null );
+</code></pre>
+
+<h3>Client JavaScript (Fetch)</h3>
+
 <code>
 Fetch ( 'Https://Usefulapis.Net/api' ,  { 
+
   Mode :  'Cors' 
+
 .}) Then ( OnLoadFunc );
+
 </code>
 
 On the other hand, on the Web server side, in order to explicitly inform the browser that access beyond Origin is permitted, it is necessary to add appropriate information to the HTTP response header.
@@ -41,12 +51,15 @@ First, the HTTP request header sent from the browser to the server includes Orig
 
 <code>
 GET  / api  HTTP / 1.1 
+
 Origin :  https://trustedsite.com
 </code>
+
 If Origin the content of Origin is a reliable Web site Origin, in the HTTP response header,
 
 <code>
-HTTP / 1.1  200  OK 
+HTTP / 1.1  200  OK
+
 Access-Control-Allow-Origin :  https://trustedsite.com
 <code>
 
