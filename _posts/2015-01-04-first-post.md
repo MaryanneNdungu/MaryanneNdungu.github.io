@@ -29,8 +29,7 @@ var  Xhr  =  New  XMLHttpRequest ();
 Xhr . Open ( 'GET' ,  'Https://Usefulapis.Net/api' );
 Xhr . addEventListener ( 'Load' ,  OnLoadFunc ,  False ); 
 Xhr . Send ( Null );
-</code></pre>
-
+</code></pre> <br>
 
 <h5>Client JavaScript (Fetch)</h5>
 
@@ -45,15 +44,14 @@ On the other hand, on the Web server side, in order to explicitly inform the bro
 First, the HTTP request header sent from the browser to the server includes Origina field for access exceeding Origin .
 
 <code>
-GET  / api  HTTP / 1.1 
-
+GET  / api  HTTP / 1.1 <br>
 Origin :  https://trustedsite.com
 </code>
 
 If Origin the content of Origin is a reliable Web site Origin, in the HTTP response header,
 
 <code>
-HTTP / 1.1  200  OK<br>
+HTTP / 1.1  200  OK <br>
 Access-Control-Allow-Origin :  https://trustedsite.com
 </code>
 
