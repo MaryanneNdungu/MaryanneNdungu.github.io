@@ -27,7 +27,7 @@ If you simply want to allow GET or POST with XHR or Fetch API, do as follows. Fi
 Xhr . Open ( 'GET' ,  'Https://Usefulapis.Net/api' );
 Xhr . addEventListener ( 'Load' ,  OnLoadFunc ,  False ); 
 Xhr . Send ( Null );
-</code></pre>
+</code></pre><br>
 
 <h5>Client JavaScript (Fetch)</h5>
 <pre><code>Fetch ( 'Https://Usefulapis.Net/api' ,  { 
