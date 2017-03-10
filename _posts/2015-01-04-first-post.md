@@ -67,7 +67,7 @@ Xhr . Open ( 'GET' ,  'Https://Usefulapis.Net/api' );
 Xhr . WithCredentials  =  True ; 
 Xhr . addEventListener ( 'Load' ,  OnLoadFunc ,  False ); 
 Xhr . Send ( null );
-</pre></code>
+</code></pre>
 
 <h5>Client JavaScript (Fetch)</h5>
 <pre><code>Fetch ( 'https://usefulapis.net/api' ,  { 
