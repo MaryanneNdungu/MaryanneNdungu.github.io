@@ -22,7 +22,7 @@ Here, some Web site https://trustedsite.com against, another Web site https://us
 When you want to allow data to be read in a simple way
 If you simply want to allow GET or POST with XHR or Fetch API, do as follows. First of all, on the client side, there is no need for any special effort in the case of XHR, and in the case of the Fetch API, declare to use CORS depending on the option.
 
-<h4>Client JavaScript (XHR)</h4>
+<h5>Client JavaScript (XHR)</h5>
 
 <pre><code>
 var  Xhr  =  New  XMLHttpRequest ();
@@ -31,7 +31,8 @@ Xhr . addEventListener ( 'Load' ,  OnLoadFunc ,  False );
 Xhr . Send ( Null );
 </code></pre>
 
-<h4>Client JavaScript (Fetch)</h4>
+
+<h5>Client JavaScript (Fetch)</h5>
 
 <code>
 Fetch ( 'Https://Usefulapis.Net/api' ,  { 
