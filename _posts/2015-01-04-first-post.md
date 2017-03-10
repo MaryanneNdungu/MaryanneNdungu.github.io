@@ -26,12 +26,12 @@ If you simply want to allow GET or POST with XHR or Fetch API, do as follows. Fi
 <pre><code>var  Xhr  =  New  XMLHttpRequest ();
 Xhr . Open ( 'GET' ,  'Https://Usefulapis.Net/api' );
 Xhr . addEventListener ( 'Load' ,  OnLoadFunc ,  False ); 
-Xhr . Send ( Null );</code></pre>
-
+Xhr . Send ( Null );
+</code></pre>
 
 <h5>Client JavaScript (Fetch)</h5>
 <pre><code>Fetch ( 'Https://Usefulapis.Net/api' ,  { 
-  Mode :  'Cors' 
+Mode :  'Cors' 
 .}) Then ( OnLoadFunc );
 </code></pre>
 
