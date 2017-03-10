@@ -66,13 +66,15 @@ If you want to allow sending and receiving of cookies during HTTP (S) communicat
 Xhr . Open ( 'GET' ,  'Https://Usefulapis.Net/api' ); 
 Xhr . WithCredentials  =  True ; 
 Xhr . addEventListener ( 'Load' ,  OnLoadFunc ,  False ); 
-Xhr . Send ( null );</pre></code>
+Xhr . Send ( null );
+</pre></code>
 
 <h5>Client JavaScript (Fetch)</h5>
 <pre><code>Fetch ( 'https://usefulapis.net/api' ,  { 
   mode :  'cors' , 
   credentials :  'include' 
-}) then ( onLoadFunc );</pre></code>
+}) then ( onLoadFunc );
+</pre></code>
 
 On the other hand, on the server side, add the following contents to the HTTP response header.
 
