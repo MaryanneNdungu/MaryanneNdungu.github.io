@@ -58,7 +58,7 @@ HTTP / 1.1  200  OK <br>
 Access-Control-Allow-Origin :  *
 </code>
 
-<h3>If you also want to allow cookies<h3>
+<h3>If you also want to allow cookies</h3>
 If you want to allow sending and receiving of cookies during HTTP (S) communication, you need to do a bit more work on both the browser and the server. First of all, in the JavaScript of the browser, do as follows. Note that in this example and later onwards Access-Control-Allow-Origin, wild card specification is not permitted in, so be careful.
 
 <h5>Client JavaScript (XHR)</h5>
@@ -76,7 +76,7 @@ Xhr . Send ( null );</pre></code>
 
 On the other hand, on the server side, add the following contents to the HTTP response header.
 
-</code>HTTP / 1.1  200  OK <br>
+<code>HTTP / 1.1  200  OK <br>
 Access-Control-Allow-Origin :  https://trustedsite.com <br>
 Access-Control-Allow-Credentials :  true<br>
 </code>
