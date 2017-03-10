@@ -82,34 +82,43 @@ On the other hand, on the server side, add the following contents to the HTTP re
 Access-Control-Allow-Origin :  https://trustedsite.com <br>
 Access-Control-Allow-Credentials :  true<br>
 </code>
-If you want to use more elaborate HTTP communication
+
+<h3>If you want to use more elaborate HTTP communication</h3>
+
 Specification of CORS in, If you can apply one of the following conditions, prior to performing the actual HTTP request (GET or POST), Preflight Request as OPTIONS has it has been established to carry out the request. In this case, care must be taken on the server side because similar CORS correspondence is required in OPTIONS in addition to GET and POST.
 
 The method of the HTTP request is other than GET, POST, HEAD.
 A field other than Accept, Accept-Language, and Content-Language is included in the HTTP request header, or a field other than application / x-www-form-urlencoded, multipart / form-data, text / plain Content is specified.
 The preflight request contains the following HTTP request header:
 
-OPTIONS  / api  HTTP / 1.1 
-Access-Control-Request-Method :  (HTTP method of subsequent request (GET, POST, etc.))
+<code> OPTIONS  / api  HTTP / 1.1 <br>
+Access-Control-Request-Method :  (HTTP method of subsequent request (GET, POST, etc.))<br>
+</code>
+
 As a response to this preflight request, for example, it is necessary to specify a method of HTTP request to allow as access exceeding Origin at least as follows, for example.
 
-HTTP / 1.1  200  OK 
-Access-Control-Allow-Origin :  https://trustedsite.com 
-Access-Control-Allow-Methods :  GET, POST, HEAD, OPTIONS
-If you want to add your own HTTP request header to the request
+<code>
+HTTP / 1.1  200  OK <br>
+Access-Control-Allow-Origin :  https://trustedsite.com <br>
+Access-Control-Allow-Methods :  GET, POST, HEAD, OPTIONS<br>
+</code>
+
+<h3>If you want to add your own HTTP request header to the request</h3>
 
 For example, suppose you add a header called X - MyRequest and X - MyOption on the browser side.
 
-Client JavaScript (XHR)
-var  Xhr  =  New  XMLHttpRequest (); 
+<h5>Client JavaScript (XHR)</h5>
+<pre><code>var  Xhr  =  New  XMLHttpRequest (); 
 Xhr . Open ( 'GET' ,  'Https://Usefulapis.Net/api' ); 
 Xhr . WithCredentials  =  True ; 
 Xhr . setRequestHeader ( 'X-MyRequest' ,  'This-Is- Test-Cors' ); 
 Xhr . setRequestHeader ( 'X-MyOption' ,  'My-Option' ); 
 Xhr . addEventListener ( 'Load' ,  OnLoadFunc ,  False );
 Xhr . Send ( null );
-Client JavaScript (Fetch)
-Fetch ( 'https://usefulapis.net/api' ,  { 
+</code></pre>
+
+<h5>Client JavaScript (Fetch)</h5>
+<pre><code>Fetch ( 'https://usefulapis.net/api' ,  { 
   method :  'GET' , 
   mode :  'cors' , 
   credentials :  ' include ' , 
@@ -118,6 +127,8 @@ Fetch ( 'https://usefulapis.net/api' ,  {
     ' X - MyOption ' :  ' my - option ' 
   } 
 }) then ( onLoadFunc );
+</pre></code>
+
 In this case, the browser sends a preflight request containing the following HTTP request header to the server.
 
 OPTIONS  / api  HTTP / 1.1 
