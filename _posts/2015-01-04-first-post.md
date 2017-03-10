@@ -27,7 +27,7 @@ If you simply want to allow GET or POST with XHR or Fetch API, do as follows. Fi
 Xhr . Open ( 'GET' ,  'Https://Usefulapis.Net/api' );
 Xhr . addEventListener ( 'Load' ,  OnLoadFunc ,  False ); 
 Xhr . Send ( Null );
-</code></pre><br>
+</code></pre>
 
 <h5>Client JavaScript (Fetch)</h5>
 <pre><code>Fetch ( 'Https://Usefulapis.Net/api' ,  { 
@@ -53,27 +53,33 @@ Access-Control-Allow-Origin :  https://trustedsite.com
 
 If you add content like this, access will be allowed on the browser side. In such a simple example, it is possible to specify wildcards to permit access to any website beyond Origin (partial designation such as subdomain can not be done).
 
-HTTP / 1.1  200  OK 
+<code>
+HTTP / 1.1  200  OK <br>
 Access-Control-Allow-Origin :  *
-If you also want to allow cookies
+</code>
+
+<h3>If you also want to allow cookies<h3>
 If you want to allow sending and receiving of cookies during HTTP (S) communication, you need to do a bit more work on both the browser and the server. First of all, in the JavaScript of the browser, do as follows. Note that in this example and later onwards Access-Control-Allow-Origin, wild card specification is not permitted in, so be careful.
 
-Client JavaScript (XHR)
-var  Xhr  =  New  XMLHttpRequest (); 
+<h5>Client JavaScript (XHR)</h5>
+<pre><code> var  Xhr  =  New  XMLHttpRequest (); 
 Xhr . Open ( 'GET' ,  'Https://Usefulapis.Net/api' ); 
 Xhr . WithCredentials  =  True ; 
 Xhr . addEventListener ( 'Load' ,  OnLoadFunc ,  False ); 
-Xhr . Send ( null );
-Client JavaScript (Fetch)
-Fetch ( 'https://usefulapis.net/api' ,  { 
+Xhr . Send ( null );</pre></code>
+
+<h5>Client JavaScript (Fetch)</h5>
+<pre><code>Fetch ( 'https://usefulapis.net/api' ,  { 
   mode :  'cors' , 
   credentials :  'include' 
-}) then ( onLoadFunc );
+}) then ( onLoadFunc );</pre></code>
+
 On the other hand, on the server side, add the following contents to the HTTP response header.
 
-HTTP / 1.1  200  OK 
-Access-Control-Allow-Origin :  https://trustedsite.com 
-Access-Control-Allow-Credentials :  true
+</code>HTTP / 1.1  200  OK <br>
+Access-Control-Allow-Origin :  https://trustedsite.com <br>
+Access-Control-Allow-Credentials :  true<br>
+</code>
 If you want to use more elaborate HTTP communication
 Specification of CORS in, If you can apply one of the following conditions, prior to performing the actual HTTP request (GET or POST), Preflight Request as OPTIONS has it has been established to carry out the request. In this case, care must be taken on the server side because similar CORS correspondence is required in OPTIONS in addition to GET and POST.
 
