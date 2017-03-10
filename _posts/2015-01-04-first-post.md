@@ -74,7 +74,7 @@ Xhr . Send ( null );
   mode :  'cors' , 
   credentials :  'include' 
 }) then ( onLoadFunc );
-</pre></code>
+</code></pre>
 
 On the other hand, on the server side, add the following contents to the HTTP response header.
 
