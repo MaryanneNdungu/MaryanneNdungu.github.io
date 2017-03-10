@@ -28,9 +28,9 @@ Xhr . Open ( 'GET' ,  'Https://Usefulapis.Net/api' );
 Xhr . addEventListener ( 'Load' ,  OnLoadFunc ,  False ); 
 Xhr . Send ( Null );</code></pre>
 
+
 <h5>Client JavaScript (Fetch)</h5>
-<pre><code>
-Fetch ( 'Https://Usefulapis.Net/api' ,  { 
+<pre><code>Fetch ( 'Https://Usefulapis.Net/api' ,  { 
   Mode :  'Cors' 
 .}) Then ( OnLoadFunc );
 </code></pre>
