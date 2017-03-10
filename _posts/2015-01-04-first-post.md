@@ -23,7 +23,6 @@ When you want to allow data to be read in a simple way
 If you simply want to allow GET or POST with XHR or Fetch API, do as follows. First of all, on the client side, there is no need for any special effort in the case of XHR, and in the case of the Fetch API, declare to use CORS depending on the option.
 
 <h5>Client JavaScript (XHR)</h5>
-
 <pre><code>
 var  Xhr  =  New  XMLHttpRequest ();
 Xhr . Open ( 'GET' ,  'Https://Usefulapis.Net/api' );
@@ -33,13 +32,11 @@ Xhr . Send ( Null );
 
 <h5>Client JavaScript (Fetch)</h5>
 
-<code>
+<pre><code>
 Fetch ( 'Https://Usefulapis.Net/api' ,  { 
-
   Mode :  'Cors' 
-  
 .}) Then ( OnLoadFunc );
-</code>
+</code></pre>
 
 On the other hand, on the Web server side, in order to explicitly inform the browser that access beyond Origin is permitted, it is necessary to add appropriate information to the HTTP response header.
 
