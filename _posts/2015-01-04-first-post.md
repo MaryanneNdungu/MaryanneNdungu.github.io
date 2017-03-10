@@ -22,27 +22,21 @@ Here, some Web site https://trustedsite.com against, another Web site https://us
 When you want to allow data to be read in a simple way
 If you simply want to allow GET or POST with XHR or Fetch API, do as follows. First of all, on the client side, there is no need for any special effort in the case of XHR, and in the case of the Fetch API, declare to use CORS depending on the option.
 
-<h3>Client JavaScript (XHR)</h3>
+<h4>Client JavaScript (XHR)</h4>
 
 <pre><code>
 var  Xhr  =  New  XMLHttpRequest ();
-
 Xhr . Open ( 'GET' ,  'Https://Usefulapis.Net/api' );
-
 Xhr . addEventListener ( 'Load' ,  OnLoadFunc ,  False ); 
-
 Xhr . Send ( Null );
 </code></pre>
 
-<h3>Client JavaScript (Fetch)</h3>
+<h4>Client JavaScript (Fetch)</h4>
 
 <code>
 Fetch ( 'Https://Usefulapis.Net/api' ,  { 
-
   Mode :  'Cors' 
-
 .}) Then ( OnLoadFunc );
-
 </code>
 
 On the other hand, on the Web server side, in order to explicitly inform the browser that access beyond Origin is permitted, it is necessary to add appropriate information to the HTTP response header.
