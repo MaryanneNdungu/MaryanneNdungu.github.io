@@ -9,7 +9,7 @@ As it is now, when I tried various Cross-Origin Resource Sharing (CORS) , I noti
 
 <h3> In the first place</h3>
 
-In current Web browsers, Same-Origin Policy (same generation policy in Japanese) is applied to prevent information on one Web site from being abused by another malicious Web site.
+In current Web browsers, Same-Origin Policy (same generation policy in Japanese) is applied to prevent information on one Web site from being abused by another malicious Web site .
 
 For example, when displaying a certain Web site https://guiltysite.com in a browser, you can use HTTP (S ( XHR)) from this Web page from another Web site https://innocentsite.net with XMLHttpRequest (XHR) or Fetch API ), An error occurs when trying to read data.
 
