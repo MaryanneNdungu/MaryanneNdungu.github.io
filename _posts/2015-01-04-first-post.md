@@ -1,6 +1,6 @@
 ---
 layout: post
-title: First post!
+title: CORS for Cross-Domain Communication!
 image: /img/hello_world.jpeg
 tags: [random, exciting-stuff]
 ---
