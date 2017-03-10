@@ -127,26 +127,33 @@ Xhr . Send ( null );
     ' X - MyOption ' :  ' my - option ' 
   } 
 }) then ( onLoadFunc );
-</pre></code>
+</code></pre>
 
 In this case, the browser sends a preflight request containing the following HTTP request header to the server.
 
-OPTIONS  / api  HTTP / 1.1 
-Origin :  https://trustedsite.com 
-Access - Control - Request - Method :  GET 
-Access - Control - Request - Headers :  X - MyRequest, X - MyOption
+<code>
+OPTIONS  / api  HTTP / 1.1 <br>
+Origin :  https://trustedsite.com <br>
+Access - Control - Request - Method :  GET <br>
+Access - Control - Request - Headers :  X - MyRequest, X - MyOption <br>
+</code>
+
 On the server side, it decides whether to allow methods and headers indicated in these request headers, and returns a response header. The method specified in Access - Control - Allow - Methods and the header specified in Access - Control - Allow - Headers are then allowed for HTTP requests actually sent by the browser. (The corresponding header is required for both preflight and actual request.)
 
-HTTP / 1.1  200  OK 
-Access-Control-Allow-Origin :  Https://Trustedsite.Com 
-Access-Control-Allow-Credentials :  True 
-Access-Control-Allow-Methods :  GET, POST, HEAD, OPTIONS 
-Access-Control-Allow- Headers :  X-MyRequest, X-MyOption
-When you want to add a unique HTTP response header to the response and read it from the browser
+<code>
+HTTP / 1.1  200  OK <br>
+Access-Control-Allow-Origin :  Https://Trustedsite.Com <br>
+Access-Control-Allow-Credentials :  True <br>
+Access-Control-Allow-Methods :  GET, POST, HEAD, OPTIONS <br>
+Access-Control-Allow- Headers :  X-MyRequest, X-MyOption <br>
+</code>
+
+<h3>When you want to add a unique HTTP response header to the response and read it from the browser</h3>
 
 In the case of access exceeding Origin, for example, the code on the browser side,
 
-Client JavaScript (XHR)
+<h5>Client JavaScript (XHR)</h5>
+<pre><code>
 var  Xhr  =  New  XMLHttpRequest (); 
 Xhr . Open ( 'GET' ,  'Https://Usefulapis.Net/api' ); 
 Xhr . WithCredentials  =  True ; 
@@ -159,8 +166,10 @@ Function  OnLoadFunc ()  {
   var  MyResponse  =  Xhr . getResponseHeader ( 'X-MyResponse' ); 
   var  MyOption  =  Xhr . getResponseHeader ( 'X-MyOption' ); 
 }
-Client JavaScript (Fetch)
-Fetch ( 'https://usefulapis.net/api' ,  { 
+</code></pre>
+
+<h5>Client JavaScript (Fetch)</h5>
+<pre><code>Fetch ( 'https://usefulapis.net/api' ,  { 
   method :  'GET' , 
   mode :  'cors' , 
   credentials :  ' include ' , 
@@ -173,31 +182,41 @@ Fetch ( 'https://usefulapis.net/api' ,  {
 Function  OnLoadFunc ( Response )  { 
   var  MyResponse  =  Response . Headers . Get ( 'X-MyResponse' ); 
   var  MyOption  =  Response . Headers . Get ( 'X-MyOption' ); 
-}
+} </code></pre>
+
 On the other hand, from the server side,
 
-HTTP / 1.1  200  OK 
-X - MyResponse :  this - is - successful - response 
-X - MyOptions :  good - result
+<code>
+HTTP / 1.1  200  OK <br>
+X - MyResponse :  this - is - successful - response <br>
+X - MyOptions :  good - result<br>
+</code>
+
 When trying to return a unique response header like the browser to the browser, if the browser tries to acquire the contents of these response headers, it is regarded as trying to access a non-secure header and access is not permitted It is getting. (It seems that the response header that access is permitted is Cache-Control, Content-Language, Content-Type, Expires, Last-Modified, Pragma.)
 
 To allow the browser to access such a custom response header, specify the response header you want to allow with Access - Control - Expose - Headers.
 
-HTTP / 1.1  200  OK 
-Access-Control-Allow-Origin :  Https://Trustedsite.Com 
-Access-Control-Allow-Credentials :  True 
-Access-Control-Allow-Methods :  GET, POST, HEAD, OPTIONS 
-Access-Control-Allow- Headers :  X - MyRequest, X - MyOption 
-Access - Control - Expose - Headers :  X - MyResponse, X - MyOption
-By the way, are preflight requests done every time?
+<code>
+HTTP / 1.1  200  OK <br>
+Access-Control-Allow-Origin :  Https://Trustedsite.Com <br>
+Access-Control-Allow-Credentials :  True <br>
+Access-Control-Allow-Methods :  GET, POST, HEAD, OPTIONS <br>
+Access-Control-Allow- Headers :  X - MyRequest, X - MyOption <br>
+Access - Control - Expose - Headers :  X - MyResponse, X - MyOption<br>
+</code>
+
+<h3>By the way, are preflight requests done every time?</h3>
 
 In the preflight request, you can specify the expiration date to be cached by the browser from the server side. Within this deadline, the first preflight request will also be applied to subsequent HTTP requests for the same URL.
 
-HTTP / 1.1  200  OK 
-Access-Control-Allow-Origin :  Https://Trustedsite.Com 
-Access-Control-Allow-Credentials :  True 
-Access-Control-Allow-Methods :  GET, POST, HEAD, OPTIONS 
-Access-Control-Allow- Headers :  X - MyRequest, X - MyOption 
-Access - Control - Expose - Headers :  X - MyResponse, X - MyOption 
-Access - Control - Max - Age :  864000
+<code>
+HTTP / 1.1  200  OK <br>
+Access-Control-Allow-Origin :  Https://Trustedsite.Com <br>
+Access-Control-Allow-Credentials :  True <br>
+Access-Control-Allow-Methods :  GET, POST, HEAD, OPTIONS <br>
+Access-Control-Allow- Headers :  X - MyRequest, X - MyOption <br>
+Access - Control - Expose - Headers :  X - MyResponse, X - MyOption <br>
+Access - Control - Max - Age :  864000 <br>
+</code>
+
 For Access-Control-Max-Age, specify the expiration time in seconds. In the above example, it is 10 days (10 (days) × 24 (hours) × 60 (minute) × 60 (second) = 864,000 (sec)).
