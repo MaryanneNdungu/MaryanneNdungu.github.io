@@ -58,10 +58,9 @@ Origin :  https://trustedsite.com
 If Origin the content of Origin is a reliable Web site Origin, in the HTTP response header,
 
 <code>
-HTTP / 1.1  200  OK
-
+HTTP / 1.1  200  OK<br>
 Access-Control-Allow-Origin :  https://trustedsite.com
-<code>
+</code>
 
 If you add content like this, access will be allowed on the browser side. In such a simple example, it is possible to specify wildcards to permit access to any website beyond Origin (partial designation such as subdomain can not be done).
 
