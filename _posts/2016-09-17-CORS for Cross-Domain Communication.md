@@ -94,7 +94,7 @@ Specification of CORS in Preflight Request as OPTIONS as it has been established
 <li>The preflight request contains the following HTTP request header:</li>
 </ul>
 
-<code> OPTIONS  / api  HTTP / 1.1 <br>
+<code>OPTIONS  / api  HTTP / 1.1 <br>
 Access-Control-Request-Method :  (HTTP method of subsequent request (GET, POST, etc.))<br>
 </code>
 
