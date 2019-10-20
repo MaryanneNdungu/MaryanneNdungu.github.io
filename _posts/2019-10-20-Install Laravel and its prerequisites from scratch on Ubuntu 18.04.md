@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Install Laravel and its prerequisites from scratch on Ubuntu 18.04
+image: /img/laravel.png
 tags: [Laravel, install, php]
 ---
 
