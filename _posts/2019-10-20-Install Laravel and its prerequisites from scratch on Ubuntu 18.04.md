@@ -5,7 +5,7 @@ tags: [Laravel, install, php]
 ---
 
 This is how I went about installing Laravel in my Ubuntu 18.04
-
+<br>
 ## Install PHP(php 7.3) with Nginx
  
  To install the PHP and PHP FPM packages run the following command:
@@ -15,7 +15,7 @@ This is how I went about installing Laravel in my Ubuntu 18.04
  >systemctl status php7.2-fpm
  
  For more details, check out the tutorial:
- https://linuxize.com/post/how-to-install-php-on-ubuntu-18-04/
+ [https://linuxize.com/post/how-to-install-php-on-ubuntu-18-04/]
 
 <br>
 ## Install Nginx
@@ -32,7 +32,7 @@ Check installation:
  >systemctl status nginx
 
 For more information, checkout tutorial:
-https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04-quickstart
+[https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04-quickstart]
 
 <br>
 ## Install mysql
@@ -45,7 +45,7 @@ Run the following commands:
 > sudo mysql_secure_installation
 
 For more info, checkout tutorial:
-https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04
+[https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04]
 
 <br>
 ## Download composer
@@ -61,21 +61,20 @@ Download Composer
 >php -r "unlink('composer-setup.php');"
 
 For more info, check out:
-https://getcomposer.org/download/
+[https://getcomposer.org/download/]
 
 **Install composer locally/Globally**
-https://getcomposer.org/doc/00-intro.md
+[https://getcomposer.org/doc/00-intro.md]
 
 <br>
 ## Install Laravel - via Laravel installer
 
-https://laravel.com/docs/6.x/installation
+[https://laravel.com/docs/6.x/installation]
 
 
 **Add composer to $PATH**
-export the following path to system variables
 
-> PATH=$HOME/.config/composer/vendor/bin
+export the following path to system variables
 
 > export PATH=$PATH:$HOME/.config/composer/vendor/bin
 
@@ -93,8 +92,9 @@ Run
 <br>
 ## Problems I encountered
 I encountered this problem when I run 'composer install'
+
 <code>
-- Your requirements could not be resolved to an installable set of packages
+Your requirements could not be resolved to an installable set of packages
 </code>
 
 <br>
@@ -110,8 +110,7 @@ Go ahead and install the php7.3 extension:
 
 <br>
 ## Problem 2:
-<code>
-- phpunit/phpunit 8.4.1 requires ext-dom * -> the requested PHP extension dom is missing from your system.
+<code> phpunit/phpunit 8.4.1 requires ext-dom * -> the requested PHP extension dom is missing from your system.
 </code>
 
 <br>
@@ -120,9 +119,9 @@ Go ahead and install the php7.3 extension:
 > sudo apt-get install php7.3-dom
 
 **Run project again**
->Run 'compose install' again
+> Run 'compose install' again
 
->Run 'php artisan serve'
+> Run 'php artisan serve'
 
 <br>
 # More problems?
@@ -130,7 +129,7 @@ If you still encounter problems or get the server error 500 page (like I did), c
 
 **Error:** 
 <code>
-- No application encryption specified
+No application encryption specified
 </code>
 
 **Solution:**
@@ -150,4 +149,5 @@ Run
 
 > php artisan serve
 
+<br>
 **Hopefully everything runs now!**
