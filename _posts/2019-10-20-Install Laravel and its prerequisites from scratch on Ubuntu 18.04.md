@@ -62,6 +62,7 @@ Download Composer
 For more info, check out:
 [https://getcomposer.org/download/](https://getcomposer.org/download/)
 
+<br>
 **Install composer locally/Globally**
 
 Follow the instructions given at: [https://getcomposer.org/doc/00-intro.md](https://getcomposer.org/doc/00-intro.md)
