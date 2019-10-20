@@ -14,10 +14,9 @@ This is how I went about installing Laravel in my Ubuntu 18.04
  >sudo apt install php-fpm
  
  Check the status of the PHP FPM service with:
- >systemctl status php7.2-fpm
+ >systemctl status php7.3-fpm
  
- For more details, check out the tutorial:
- [https://linuxize.com/post/how-to-install-php-on-ubuntu-18-04/]
+ For more details, check out the tutorial [here](https://linuxize.com/post/how-to-install-php-on-ubuntu-18-04/)
 
 <br>
 ## Install Nginx
@@ -33,8 +32,7 @@ Adjust Firewall:
 Check installation:
  >systemctl status nginx
 
-For more information, checkout tutorial:
-[https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04-quickstart]
+For more information, checkout tutorial [here](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04-quickstart)
 
 <br>
 ## Install mysql
@@ -46,8 +44,7 @@ Run the following commands:
 
 > sudo mysql_secure_installation
 
-For more info, checkout tutorial:
-[https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04]
+For more info, checkout tutorial [here](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04)
 
 <br>
 ## Download composer
@@ -67,12 +64,12 @@ For more info, check out:
 
 **Install composer locally/Globally**
 
-(https://getcomposer.org/doc/00-intro.md)
+[](https://getcomposer.org/doc/00-intro.md)
 
 <br>
 ## Install Laravel - via Laravel installer
 
-[https://laravel.com/docs/6.x/installation]
+[](https://laravel.com/docs/6.x/installation)
 
 
 **Add composer to $PATH**
