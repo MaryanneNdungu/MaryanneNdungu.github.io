@@ -32,8 +32,12 @@ For more information, checkout tutorial:
 https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04-quickstart
 
 ## Install mysql
+Run the following commands: 
+
 > sudo apt update
+
 > sudo apt install mysql-server
+
 > sudo mysql_secure_installation
 
 For more info, checkout tutorial:
@@ -41,7 +45,7 @@ https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-
 
 ## Download composer
 
-**Download Composer**
+Download Composer
 
 > php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 
@@ -52,11 +56,9 @@ https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-
 >php -r "unlink('composer-setup.php');"
 
 For more info, check out:
-
 https://getcomposer.org/download/
 
 **Install composer locally/Globally**
-
 https://getcomposer.org/doc/00-intro.md
 
 
@@ -66,10 +68,13 @@ https://laravel.com/docs/6.x/installation
 
 
 ### Add composer to $PATH
+export the following path to system variables
 
 > PATH=$HOME/.config/composer/vendor/bin
 
-# 
+> export PATH=$PATH:$HOME/.config/composer/vendor/bin
+
+
 # Ready? Run!
 
 **Create Laravel Project**
@@ -77,14 +82,16 @@ https://laravel.com/docs/6.x/installation
 
 **Run**
 > Run 'composer install'
+
 > Run 'php artisan serve'
 
 
 # Problems I encountered
 I encountered this problem when I run 'composer install'
-```diff
+<code>
 - Your requirements could not be resolved to an installable set of packages
-```
+</code>
+
 ## Problem 1:
 <code> laravel/framework v6.3.0 requires ext-mbstring * -> the requested PHP extension mbstring is missing from your system.
  </code>
@@ -92,44 +99,41 @@ I encountered this problem when I run 'composer install'
 ## Solution
 Go ahead and install the php7.3 extension:
 
-<code>
-sudo apt-get install php7.3-mbstring
-</code>
+> sudo apt-get install php7.3-mbstring
 
 ## Problem 2:
-```diff
+<code>
 - phpunit/phpunit 8.4.1 requires ext-dom * -> the requested PHP extension dom is missing from your system.
-```
+</code>
+
 ## Solution
 Go ahead and install the php7.3 extension:
-```diff
-+ sudo apt-get install php7.3-dom
-```
+> sudo apt-get install php7.3-dom
 
 **Run project again**
 >Run 'compose install' again
+
 >Run 'php artisan serve'
 
 # More problems?
 If you still encounter problems or get the server error 500 page (like I did), check the log files located at: projectFolder/storage/logs
 
 **Error:** 
-```diff
+<code>
 - No application encryption specified
-```
+</code>
 
 **Solution:**
  Chances are that you don't have .env file in your project.
  Go ahead and run 
- ``` diff
- + cp .env.example .env
-```
+ 
+ > cp .env.example .env
   
  Then generate the encryption key. Run the following commands:
- ``` diff
+<code>
  + php artisan key:generate
  + php artisan config:cache
-  ``` 
+</code>
   
 **Ready? Run!**
 > Run 'php artisan serve'
