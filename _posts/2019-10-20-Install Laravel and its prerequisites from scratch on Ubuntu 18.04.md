@@ -5,7 +5,7 @@ image: /img/laravel.png
 tags: [Laravel, install, php]
 ---
 <br>
-This is how I went about installing Laravel in my Ubuntu 18.04
+This is how I went about installing Laravel on my Ubuntu 18.04
 
 <br>
 ## Install PHP(php 7.3) with Nginx
