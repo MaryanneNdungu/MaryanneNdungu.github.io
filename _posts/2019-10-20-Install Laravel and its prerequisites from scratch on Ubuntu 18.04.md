@@ -1,12 +1,12 @@
 ---
 layout: post
-title: CORS for Cross-Domain Communication!
-tags: [CORS, cross-origin, cross-domain]
+title: Install Laravel and its prerequisites from scratch on Ubuntu 18.04
+tags: [Laravel, install, php]
 ---
 
 # Install Laravel and its prerequisites from scratch on Ubuntu 18.04
 
- ## Install PHP (php 7.3) with Nginx
+## Install PHP(php 7.3) with Nginx
  
  To install the PHP and PHP FPM packages run the following command:
  >sudo apt install php-fpm
@@ -17,7 +17,7 @@ tags: [CORS, cross-origin, cross-domain]
  For more details, check out the tutorial:
 https://linuxize.com/post/how-to-install-php-on-ubuntu-18-04/
 
- ## Install Nginx
+## Install Nginx
  Update your local package index:
  >sudo apt update
  
