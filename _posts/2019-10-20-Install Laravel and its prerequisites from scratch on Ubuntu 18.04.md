@@ -32,7 +32,7 @@ Adjust Firewall:
 Check installation:
  >systemctl status nginx
 
-For more information, checkout tutorial [here](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04-quickstart)
+For more information, checkout the tutorial [here](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04-quickstart)
 
 <br>
 ## Install mysql
@@ -44,7 +44,7 @@ Run the following commands:
 
 > sudo mysql_secure_installation
 
-For more info, checkout tutorial [here](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04)
+For more info, checkout the tutorial [here](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04)
 
 <br>
 ## Download composer
@@ -60,16 +60,16 @@ Download Composer
 >php -r "unlink('composer-setup.php');"
 
 For more info, check out:
-[https://getcomposer.org/download/]
+[https://getcomposer.org/download/](https://getcomposer.org/download/)
 
 **Install composer locally/Globally**
 
-[](https://getcomposer.org/doc/00-intro.md)
+[https://getcomposer.org/doc/00-intro.md](https://getcomposer.org/doc/00-intro.md)
 
 <br>
 ## Install Laravel - via Laravel installer
 
-[](https://laravel.com/docs/6.x/installation)
+[https://laravel.com/docs/6.x/installation](https://laravel.com/docs/6.x/installation)
 
 
 **Add composer to $PATH**
