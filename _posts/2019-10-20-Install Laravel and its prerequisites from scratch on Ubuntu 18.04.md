@@ -1,4 +1,10 @@
-Install Laravel and its prerequisites from scratch on Ubuntu 18.04
+---
+layout: post
+title: CORS for Cross-Domain Communication!
+tags: [CORS, cross-origin, cross-domain]
+---
+
+# Install Laravel and its prerequisites from scratch on Ubuntu 18.04
 
  ## Install PHP (php 7.3) with Nginx
  
@@ -51,6 +57,7 @@ https://getcomposer.org/download/
 
 **Install composer locally/Globally**
 https://getcomposer.org/doc/00-intro.md
+
 
 ## Install Laravel - via Laravel installer
 https://laravel.com/docs/6.x/installation
