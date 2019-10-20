@@ -66,7 +66,8 @@ For more info, check out:
 [https://getcomposer.org/download/]
 
 **Install composer locally/Globally**
-[https://getcomposer.org/doc/00-intro.md]
+
+(https://getcomposer.org/doc/00-intro.md)
 
 <br>
 ## Install Laravel - via Laravel installer
@@ -76,7 +77,7 @@ For more info, check out:
 
 **Add composer to $PATH**
 
-export the following path to system variables
+Run the following command:
 
 > export PATH=$PATH:$HOME/.config/composer/vendor/bin
 
@@ -101,7 +102,7 @@ Your requirements could not be resolved to an installable set of packages
 
 <br>
 ## Problem 1:
-<code> laravel/framework v6.3.0 requires ext-mbstring * -> the requested PHP extension mbstring is missing from your system.
+<code>Laravel/framework v6.3.0 requires ext-mbstring * -> the requested PHP extension mbstring is missing from your system.
  </code>
  
 <br>
@@ -112,7 +113,7 @@ Go ahead and install the php7.3 extension:
 
 <br>
 ## Problem 2:
-<code> phpunit/phpunit 8.4.1 requires ext-dom * -> the requested PHP extension dom is missing from your system.
+<code>phpunit/phpunit 8.4.1 requires ext-dom * -> the requested PHP extension dom is missing from your system.
 </code>
 
 <br>
@@ -130,9 +131,7 @@ Go ahead and install the php7.3 extension:
 If you still encounter problems or get the server error 500 page (like I did), check the log files located at: projectFolder/storage/logs
 
 **Error:** 
-<code>
-No application encryption specified
-</code>
+<code>No application encryption specified</code>
 
 **Solution:**
  Chances are that you don't have .env file in your project.
@@ -147,6 +146,7 @@ No application encryption specified
  > php artisan config:cache
   
 **Ready? Run!**
+
 Run
 
 > php artisan serve
