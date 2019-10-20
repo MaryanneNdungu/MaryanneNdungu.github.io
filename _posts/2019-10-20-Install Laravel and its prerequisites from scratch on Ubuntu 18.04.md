@@ -4,8 +4,6 @@ title: Install Laravel and its prerequisites from scratch on Ubuntu 18.04
 tags: [Laravel, install, php]
 ---
 
-# Install Laravel and its prerequisites from scratch on Ubuntu 18.04
-
 ## Install PHP(php 7.3) with Nginx
  
  To install the PHP and PHP FPM packages run the following command:
@@ -44,6 +42,7 @@ https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-
 ## Download composer
 
 **Download Composer**
+
 > php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 
 > php -r "if (hash_file('sha384', 'composer-setup.php') === 'a5c698ffe4b8e849a443b120cd5ba38043260d5c4023dbf93e1558871f1f07f58274fc6f4c93bcfd858c6bd0775cd8d1') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
@@ -53,13 +52,16 @@ https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-
 >php -r "unlink('composer-setup.php');"
 
 For more info, check out:
+
 https://getcomposer.org/download/
 
 **Install composer locally/Globally**
+
 https://getcomposer.org/doc/00-intro.md
 
 
 ## Install Laravel - via Laravel installer
+
 https://laravel.com/docs/6.x/installation
 
 
@@ -67,7 +69,7 @@ https://laravel.com/docs/6.x/installation
 
 > PATH=$HOME/.config/composer/vendor/bin
 
-
+# 
 # Ready? Run!
 
 **Create Laravel Project**
@@ -84,14 +86,15 @@ I encountered this problem when I run 'composer install'
 - Your requirements could not be resolved to an installable set of packages
 ```
 ## Problem 1:
-```diff
-- `laravel/framework v6.3.0 requires ext-mbstring * -> the requested PHP extension mbstring is missing from your system.`
-```
+<code> laravel/framework v6.3.0 requires ext-mbstring * -> the requested PHP extension mbstring is missing from your system.
+ </code>
+ 
 ## Solution
 Go ahead and install the php7.3 extension:
-```diff
-+ sudo apt-get install php7.3-mbstring
-```
+
+<code>
+sudo apt-get install php7.3-mbstring
+</code>
 
 ## Problem 2:
 ```diff
