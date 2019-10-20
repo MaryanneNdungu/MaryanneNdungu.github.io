@@ -64,12 +64,12 @@ For more info, check out:
 
 **Install composer locally/Globally**
 
-[https://getcomposer.org/doc/00-intro.md](https://getcomposer.org/doc/00-intro.md)
+Follow the instructions given at: [https://getcomposer.org/doc/00-intro.md](https://getcomposer.org/doc/00-intro.md)
 
 <br>
 ## Install Laravel - via Laravel installer
 
-[https://laravel.com/docs/6.x/installation](https://laravel.com/docs/6.x/installation)
+Follow the instructions given at: [https://laravel.com/docs/6.x/installation](https://laravel.com/docs/6.x/installation)
 
 
 **Add composer to $PATH**
