@@ -23,6 +23,7 @@ Let's do this!
 Run the following commands: 
 
 >sudo adduser <username>
+ 
 >sudo adduser jane
 
 >sudo usermod -aG sudo jane // add to sudo group
