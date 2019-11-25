@@ -5,7 +5,11 @@ image: /img/cloud_vps.png
 tags: [VPS, virtual private server, vps hosting, web hosting]
 ---
 <br>
+First and foremost, congratulations on your new VPS! Now that you've purchased your vps service, let's make the basic configurations needed to get your vps up and ready for use! 
 
+Assumptions: Your vps is running Ubuntu 18.04 and you have the root credentials!
+
+Let's do this!
 
 <br>
 ## Prerequisites
@@ -40,7 +44,7 @@ Run the following commands:
 
 >sudo systemctl enable nginx
 
-**Start Nginx
+**Start Nginx**
 
 >systemctl start nginx
 
@@ -60,7 +64,7 @@ If TCP ports 80 and 443 are not in the list of open ports, allow them in firewal
 <br>
 ## Configure Virtual host in Nginx to host your domain(/etc/nginx/conf.d/virtual.conf)
 
-<code>
+```
 server {
     listen 80;
     root /opt/htdocs/binhong;
@@ -70,6 +74,6 @@ server {
         try_files $uri $uri/ =404;
     }
 }
-</code>
+```
 
-**All the best with your new VPS!**
+**You are now ready to have some fun!**
