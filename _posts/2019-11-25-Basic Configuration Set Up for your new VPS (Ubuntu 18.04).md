@@ -65,15 +65,17 @@ If TCP ports 80 and 443 are not in the list of open ports, allow them in firewal
 ## Configure Virtual host in Nginx to host your domain(/etc/nginx/conf.d/virtual.conf)
 
 ```
+
 server {
     listen 80;
-    root /opt/htdocs/binhong;
+    root /opt/htdocs/domainName;
     index index.html index.htm;
-    server_name binhong.me;
+    server_name domainName.com;
     location / {
         try_files $uri $uri/ =404;
     }
 }
+
 ```
 
 **You are now ready to have some fun!**
