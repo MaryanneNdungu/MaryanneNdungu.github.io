@@ -22,7 +22,7 @@ Let's do this!
 ## Create a non root user
 Run the following commands: 
 
->sudo adduser <username>
+>sudo adduser [username]
  
 >sudo adduser jane
 
